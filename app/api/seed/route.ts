@@ -83,7 +83,7 @@ export async function GET() {
             customer: createdCustomers.length
         })
     } catch (error: any) {
-        console.error('❌ Seeding Error:', error); // Log full error
+        console.error('Seeding Error:', error); 
         return NextResponse.json(
             { error: 'Failed to seed users', detail: error?.message || String(error) },
             { status: 500 }
